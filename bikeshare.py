@@ -19,7 +19,7 @@ def get_filters():
     # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     while True:
         try:
-            city = input('Select a city you want to analyze from (chicago,new york city, washington): ').lower()
+            city = input('Select a city from (chicago,new york city, washington) for which you want the statistics displayed: ').lower()
             break
         except ValueError:
             print('Not a valid input. Try one more time.')
@@ -156,7 +156,7 @@ def user_stats(df):
 
     # TO DO: Display counts of user types
     print('\nThe counts of user types:\n',df['User Type'].value_counts())
-    
+
 
     # TO DO: Display counts of gender
     if 'Gender' not in df.columns:
@@ -176,7 +176,7 @@ def user_stats(df):
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
-    
+
 def raw_data(df):
     while True:
         try:
@@ -189,7 +189,7 @@ def raw_data(df):
                     resp = input('Do you want to see the next 5 rows of the raw user data?: \'yes\' or \'no\'').lower()
                 else:
                     break
-            break       
+            break
         except ValueError:
             print('Not a valid input. Try one more time.')
 
