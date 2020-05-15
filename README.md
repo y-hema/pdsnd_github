@@ -17,5 +17,8 @@ chicago.csv
 new_york_city.csv
 washington.csv
 
+### Note about the data
+washington.csv file does not contain 'Gender' and 'Birth Year' columns
+
 ### Credits
 Udacity Programming for Data Science Nanodegree Program
