@@ -184,9 +184,10 @@ def raw_data(df):
             resp = input('Do you want to see the raw user data?: \'yes\' or \'no\'').lower()
             while True:
                 if resp != 'no':
-                    print(df.iloc[i:i+5,:])
-                    i+=5
-                    resp = input('Do you want to see the next 5 rows of the raw user data?: \'yes\' or \'no\'').lower()
+                    n = int(input('How many rows you want to see? Enter an integer value: '))
+                    print(df.iloc[i:i+n,:])
+                    i+=n
+                    resp = input('Do you want to see the next {} rows of the raw user data?: \'yes\' or \'no\''.format(n)).lower()
                 else:
                     break
             break
